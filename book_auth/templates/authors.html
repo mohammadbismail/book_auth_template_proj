@@ -26,13 +26,15 @@
             <thead>
                 <td>ID</td>
                 <td>Name</td>
+                <td>Notes</td>
                 <td>Action</td>
             </thead>
-            {% for author in authors%}
+            {% for author in authors %}
             <tr>
-                <td>{{book.id}}</td>
-                <td>{{book.first_name}} {{author.last_name}}</td>
-                <td><a href="">action</a></td>
+                <td>{{author.id}}</td>
+                <td>{{author.first_name}} {{author.last_name}}</td>
+                <td>{{author.desc}}</td>
+                <td><a href="/authors/{{author.id}}">view</a></td>
             </tr>
             {% endfor %}
         </table>
